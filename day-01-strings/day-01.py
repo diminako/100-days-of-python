@@ -1,4 +1,4 @@
-# Day 01 Variables
+Day 01 Variables
 
 print('Dimitri')
 print(2+2)
@@ -8,6 +8,7 @@ print("Hello World!")
 print(len("Dimitri"))
 
 name = 'Dimitri'
+print(name[0])
 print(len(name))
 print(len(name)+5)
 

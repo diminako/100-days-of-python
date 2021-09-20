@@ -32,7 +32,7 @@ print(first_num + second_num)
 print(7-3)
 print(7*3)
 print(2+1)
-print(int(6/3))
+print(int(10/3))
 print(2**3)
 # PEMDAS L->R
 print(int(3*3+3/3-3))
