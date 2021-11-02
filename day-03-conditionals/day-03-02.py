@@ -1,41 +1,46 @@
-# Picking back up after working hiatus.  :)
-# num = int(input("Input a number "))
-# if num % 2 == 0:
-#     print("Your num is even")
-# else:
-#     print("Your num is odd.")
-    
-# age = int(input("What is your age? - "))
-# if age > 17:
-#     print("Step up and we will check your height.")
-#     height = int(input("What is your height? - "))
-#     if height > 100:
-#         print("hop on and buckle up!")
-#     else:
-#         print("maybe try the kiddy rides shorty.")
-# else:
-#     print("Come back when your old enough.")
+# Roller coaster pictures if statements
+height = float(input("What is your height?..."))
 
-# new_age = int(input("What is your age? - "))
-# if new_age > 17:
-#     print("That will be $10.")
-# elif new_age > 12:
-#     print("That will be $5.")
-# elif new_age < 12:
-#     print("This is free.")
-    
-height = float(input("Enter your height in m: "))
-weight = float(input("Enter your weight in kg: "))
-bmi = round(weight / (height**2))
-print("You BMI is " + str(bmi))
-if bmi > 35:
-    print("You are clinically obese.")
-elif bmi > 30:
-    print("You are obese.")
-elif bmi > 25:
-    print("You are overweight.")
-elif bmi > 18.5:
-    print("You are a normal BMI.")
+if height > 99:
+    age = int(input("Hop on!  Wait a second... how old are you?..."))
+    if age < 12:
+        print("That will be $5.")
+        price = 5
+    elif age < 18:
+        print("That will be $7.")
+        price = 7
+    else:
+        print("That will be $12.")
+        price = 12
+        
+    want_photos = input("Do you want photos?... Y or N...")
+    if want_photos == "Y":
+        price += 3
+    print(f'The total bill is ${price}')
 else:
-    print("You are underweight.")
+    print("Sorry you can't ride.")
     
+# Pizza order program
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+price = 0
+
+if size == "S":
+    price = 15
+elif size == "M":
+    price = 20
+elif size == "L":
+    price = 25
+
+if add_pepperoni == "Y":
+    if size == "S":
+        price += 2
+    else:
+        price += 3
+
+if extra_cheese == "Y":
+    price += 1
+
+print(f"The total for your pizze is {price}")

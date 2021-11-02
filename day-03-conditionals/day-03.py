@@ -82,19 +82,24 @@ else:
 print('----------------------')
 
 # Leap year exercise
-year = int(input("What year is it? "))
+# year = int(input("What year is it? "))
 leap = "leap year"
 not_leap = "not a leap year"
 
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            year = leap
+def leap_year(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                year = leap
+            else:
+                year = not_leap
         else:
-            year = not_leap
+            year = leap
     else:
-        year = leap
-else:
-    year = not_leap
-print(year)
-        
+        year = not_leap
+    print(year)
+
+leap_year(2400)
+leap_year(1989)
+leap_year(2021)
+leap_year(2020)
